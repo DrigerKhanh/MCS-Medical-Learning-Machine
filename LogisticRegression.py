@@ -54,24 +54,32 @@ metrics = {
 
 print("\n--- Evaluation on Test Set ---")
 print(f"Test Accuracy: {test_accuracy:.2f}")
-print(f"Confusion Matrix:\n{conf_matrix}")
 print(f"Precision: {precision:.2f}")
 print(f"Recall: {recall:.2f}")
 print(f"F1-Score: {f1:.2f}")
+print(f"Confusion Matrix:\n{conf_matrix}")
 
 # Detailed classification report
 print("\nClassification Report:")
 print(classification_report(y_test, y_test_pred))
 
-# Tạo biểu đồ thanh (bar plot)
-plt.figure(figsize=(8, 6))
-sns.barplot(x=list(metrics.keys()), y=list(metrics.values()), palette="viridis")
+# # Tạo biểu đồ thanh (bar plot)
+# plt.figure(figsize=(8, 6))
+# sns.barplot(x=list(metrics.keys()), y=list(metrics.values()), palette="viridis")
 
 # Thêm tiêu đề và nhãn cho đồ thị
-plt.title('Evaluation Metrics of MLP Classifier', fontsize=14)
-plt.xlabel('Metrics', fontsize=12)
-plt.ylabel('Scores', fontsize=12)
-plt.ylim(0, 1)  # Đảm bảo rằng các giá trị trên trục y nằm trong khoảng từ 0 đến 1
+# plt.title('Evaluation Metrics of MLP Classifier', fontsize=14)
+# plt.xlabel('Metrics', fontsize=12)
+# plt.ylabel('Scores', fontsize=12)
+# plt.ylim(0, 1)  # Đảm bảo rằng các giá trị trên trục y nằm trong khoảng từ 0 đến 1
 
+# 7. Vẽ Confusion Matrix
+plt.figure(figsize=(7, 5))
+conf_matrix = confusion_matrix(y_test, y_test_pred)
+sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['Benign', 'Malignant'], yticklabels=['Benign', 'Malignant'])
+plt.title('Confusion Matrix - Logistic Regression')
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.show()
 # Hiển thị đồ thị
 plt.show()
