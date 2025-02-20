@@ -52,8 +52,8 @@ print(f"F1-score: {f1:.4f}")
 
 # 7. Vẽ Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
-plt.figure(figsize=(6,5))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=False,
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
             xticklabels=['Benign', 'Malignant'], yticklabels=['Benign', 'Malignant'])
 plt.title('SVM Confusion Matrix')
 plt.xlabel('Predicted')

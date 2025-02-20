@@ -82,4 +82,4 @@ plt.xlabel('Predicted Label')
 plt.ylabel('True Label')
 plt.show()
 # Hiển thị đồ thị
-plt.show()
+# plt.show()
