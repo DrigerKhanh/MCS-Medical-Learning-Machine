@@ -34,7 +34,8 @@ X_val = scaler.transform(X_val)
 X_test = scaler.transform(X_test)
 
 # Hyperparameter tuning for hidden_layer_sizes
-model = MLPClassifier(hidden_layer_sizes=(64, 32, 16),max_iter=500, random_state=42)
+param_grid = {'hidden_layer_sizes': [(50,), (100,), (100, 50), (200, 100)]}
+model = MLPClassifier(hidden_layer_sizes=(64, 32, 32),max_iter=500, random_state=42)
 model.fit(X_train, y_train)
 
 # Train best model
