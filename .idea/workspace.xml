@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c10034d-643b-4d4d-9258-ece6b035404d" name="Changes" comment="Update MLP hidden layer and report">
+      <change afterPath="$PROJECT_DIR$/Baitap2/AlexNetFeatureExtractionAndSVMEvaluate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baitap2/ExploratoryDataAnalysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baitap2/TransformAndAugmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Xu-li-may-hoc-y-khoa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Xu-li-may-hoc-y-khoa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/101.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/102.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/105.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/112.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/114.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/116.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/118.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/126.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/127.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/129.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/131.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/134.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/135.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/136.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/137.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/138.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/139.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/140.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/141.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/143.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/144.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/145.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/146.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/147.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/148.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/149.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/151.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/152.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/153.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/154.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/156.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/157.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/158.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/159.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/160.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/161.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/162.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/163.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/164.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/165.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/166.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/167.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/168.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/169.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/170.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/171.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/172.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/173.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/174.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/175.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/176.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/177.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/178.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/179.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/180.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/181.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/182.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/183.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/184.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/185.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/186.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/187.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/188.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/189.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/190.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/191.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/192.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/193.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/194.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/195.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/196.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/197.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/198.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/199.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/201.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/202.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/203.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/204.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/205.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/206.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/208.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/209.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/210.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/211.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/212.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/213.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/214.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/215.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/216.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/218.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/219.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/221.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/222.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/223.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/224.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/225.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/227.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/228.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/229.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/230.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/231.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/232.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/233.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/234.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/235.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/237.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/238.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/239.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/240.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/241.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/242.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/243.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/244.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/245.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/246.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/247.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/248.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/249.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/250.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/251.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/252.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/253.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/254.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/255.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/256.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/257.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/258.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/259.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/260.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/261.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/262.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/263.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/264.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/265.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/266.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/267.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/268.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/269.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/271.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/272.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/273.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/274.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/275.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/276.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/277.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/278.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/279.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/280.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/281.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/282.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/283.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/284.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/285.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/286.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/287.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/288.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/289.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/290.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/291.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/292.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/293.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/294.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/295.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/296.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/297.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/298.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/299.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/36.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/39.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/40.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/42.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/45.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/46.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/47.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/48.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/49.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/50.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/52.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/53.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/54.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/55.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/56.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/57.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/59.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/60.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/61.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/62.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/63.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/65.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/66.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/67.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/68.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/69.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/70.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/71.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/72.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/73.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/74.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/75.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/76.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/77.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/78.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/79.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/81.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/82.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/83.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/84.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/86.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/87.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/88.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/89.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/90.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/91.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/92.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/93.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/94.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/95.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/96.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/97.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/98.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/cat/99.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/101.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/102.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/105.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/112.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/114.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/116.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/118.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/126.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/127.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/129.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/131.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/134.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/135.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/136.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/137.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/138.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/139.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/140.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/141.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/143.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/144.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/145.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/146.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/147.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/148.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/149.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/151.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/152.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/153.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/154.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/156.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/157.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/158.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/159.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/160.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/161.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/162.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/163.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/164.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/165.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/166.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/167.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/168.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/169.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/170.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/171.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/172.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/173.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/174.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/175.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/176.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/177.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/178.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/179.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/180.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/181.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/182.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/183.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/184.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/185.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/186.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/187.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/188.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/189.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/190.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/191.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/192.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/193.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/194.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/195.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/196.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/197.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/198.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/199.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/201.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/202.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/203.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/204.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/205.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/206.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/208.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/209.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/210.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/211.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/212.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/213.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/214.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/215.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/216.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/218.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/219.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/221.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/222.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/223.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/224.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/225.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/227.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/228.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/229.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/230.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/231.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/232.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/233.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/234.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/235.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/237.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/238.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/239.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/240.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/241.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/242.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/243.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/244.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/245.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/246.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/247.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/248.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/249.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/250.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/251.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/252.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/253.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/254.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/255.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/256.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/257.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/258.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/259.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/260.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/261.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/262.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/263.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/264.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/265.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/266.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/267.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/268.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/269.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/271.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/272.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/273.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/274.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/275.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/276.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/277.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/278.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/279.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/280.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/281.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/282.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/283.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/284.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/285.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/286.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/287.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/288.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/289.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/290.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/291.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/292.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/293.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/294.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/295.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/296.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/297.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/298.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/299.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/36.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/39.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/40.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/42.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/45.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/46.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/47.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/48.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/49.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/50.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/52.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/53.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/54.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/55.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/56.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/57.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/59.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/60.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/61.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/62.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/63.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/65.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/66.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/67.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/68.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/69.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/70.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/71.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/72.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/73.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/74.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/75.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/76.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/77.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/78.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/79.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/81.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/82.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/83.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/84.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/86.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/87.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/88.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/89.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/90.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/91.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/92.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/93.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/94.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/95.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/96.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/97.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/98.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap2/dataset/dog/99.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DrigerKhanh&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DrigerKhanh/MCS-Medical-Learning-Machine.git&quot;,
+    &quot;accountId&quot;: &quot;ed385607-a6ac-4ef2-92dc-1f1d2beb3938&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2t5AahuhiEGYBkdvvYqBkPsFyjE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.AlexNetAndSVM.executor": "Run",
+    "Python.AlexNetFeatureExtraction.executor": "Run",
+    "Python.AlexNetFeatureExtractionAndSVMEvaluate.executor": "Run",
+    "Python.DecisionTree.executor": "Run",
+    "Python.ExploratoryDataAnalysis.executor": "Run",
+    "Python.LogisticRegression.executor": "Run",
+    "Python.MultiLayerPerceptron.executor": "Run",
+    "Python.SuppertVectorMachine.executor": "Run",
+    "Python.TransformAndAugmentation.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/ThacSiKHMT/Subjects/Xu-Li-may-hoc-trong-y-khoa/Homework-sourcecode/MCS-Medical-Learning-Machine",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ThacSiKHMT\Subjects\Xu-Li-may-hoc-trong-y-khoa\Homework-sourcecode\MCS-Medical-Learning-Machine\report" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c10034d-643b-4d4d-9258-ece6b035404d" name="Changes" comment="" />
+      <created>1739631626124</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739631626124</updated>
+      <workItem from="1739631627219" duration="2950000" />
+      <workItem from="1739664123397" duration="539000" />
+      <workItem from="1739691813201" duration="6408000" />
+      <workItem from="1739851255094" duration="19000" />
+      <workItem from="1739976992866" duration="5656000" />
+      <workItem from="1740022230739" duration="2950000" />
+      <workItem from="1740055801589" duration="9211000" />
+      <workItem from="1740296482928" duration="5379000" />
+      <workItem from="1740325053081" duration="3917000" />
+      <workItem from="1740655093444" duration="58000" />
+      <workItem from="1741277198050" duration="4357000" />
+      <workItem from="1741370590603" duration="1614000" />
+      <workItem from="1741409260627" duration="963000" />
+      <workItem from="1741417299977" duration="8741000" />
+      <workItem from="1741448329605" duration="4748000" />
+    </task>
+    <task id="LOCAL-00001" summary="Finish Breast Cancer using Decision Tree, Logistic Regression, MLP and SVM Kernel">
+      <option name="closed" value="true" />
+      <created>1740064550856</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740064550856</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update Breast Cancer report">
+      <option name="closed" value="true" />
+      <created>1740064692689</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740064692689</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update Breast Cancer report">
+      <option name="closed" value="true" />
+      <created>1740065733384</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740065733384</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update SVM confusion matrix and report">
+      <option name="closed" value="true" />
+      <created>1740066088074</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740066088074</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update Decision tree, MLP and SVM algorithm and report">
+      <option name="closed" value="true" />
+      <created>1740325811282</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740325811282</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update MLP hidden layer and report">
+      <option name="closed" value="true" />
+      <created>1740330520884</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740330520884</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Finish Breast Cancer using Decision Tree, Logistic Regression, MLP and SVM Kernel" />
+    <MESSAGE value="Update Breast Cancer report" />
+    <MESSAGE value="Update SVM confusion matrix and report" />
+    <MESSAGE value="Update Decision tree, MLP and SVM algorithm and report" />
+    <MESSAGE value="Update MLP hidden layer and report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update MLP hidden layer and report" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MCS_Medical_Learning_Machine$AlexNetAndSVM.coverage" NAME="AlexNetAndSVM Coverage Results" MODIFIED="1741278910799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Baitap2" />
+    <SUITE FILE_PATH="coverage/MCS_Medical_Learning_Machine$AlexNetFeatureExtractionAndSVMEvaluate.coverage" NAME="AlexNetFeatureExtractionAndSVMEvaluate Coverage Results" MODIFIED="1741453117979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Baitap2" />
+    <SUITE FILE_PATH="coverage/MCS_Medical_Learning_Machine$LogisticRegression.coverage" NAME="LogisticRegression Coverage Results" MODIFIED="1740296626916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MCS_Medical_Learning_Machine$MultiLayerPerceptron.coverage" NAME="MultiLayerPerceptron Coverage Results" MODIFIED="1740328924749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MCS_Medical_Learning_Machine$DecisionTree.coverage" NAME="DecisionTree Coverage Results" MODIFIED="1740297190947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MCS_Medical_Learning_Machine$AlexNetFeatureExtraction.coverage" NAME="AlexNetFeatureExtraction Coverage Results" MODIFIED="1741452834327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Baitap2" />
+    <SUITE FILE_PATH="coverage/MCS_Medical_Learning_Machine$SuppertVectorMachine.coverage" NAME="SuppertVectorMachine Coverage Results" MODIFIED="1740301520571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MCS_Medical_Learning_Machine$TransformAndAugmentation.coverage" NAME="TransformAndAugmentation Coverage Results" MODIFIED="1741423375389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Baitap2" />
+    <SUITE FILE_PATH="coverage/MCS_Medical_Learning_Machine$ExploratoryDataAnalysis.coverage" NAME="ExploratoryDataAnalysis Coverage Results" MODIFIED="1741422072178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Baitap2" />
+  </component>
+</project>
