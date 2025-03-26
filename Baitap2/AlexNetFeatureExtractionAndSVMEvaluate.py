@@ -62,6 +62,7 @@ optimizer = optim.Adam(alexnet.classifier.parameters(), lr=0.0001)
 
 # Training Loop
 num_epochs = 5
+loss_history = []  # Save loss for each epoch
 for epoch in range(num_epochs):
     alexnet.train()
     running_loss = 0.0
@@ -82,10 +83,20 @@ for epoch in range(num_epochs):
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
 
+    loss_history.append(running_loss / len(train_loader))
     accuracy = 100 * correct / total
     print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}, Accuracy: {accuracy:.2f}%")
 
 print("Training hoàn tất!")
+
+# Ve loss function
+plt.plot(range(1, num_epochs + 1), loss_history, marker='o', label='Training Loss')
+plt.title('Training Loss Over Epochs')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.grid(True)
+plt.legend()
+plt.show()
 
 # Đánh giá trên tập validation
 alexnet.eval()
