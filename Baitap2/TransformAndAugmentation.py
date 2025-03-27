@@ -30,7 +30,7 @@ train_transform = transforms.Compose([
 train_dataset = datasets.ImageFolder(root=train_dir)
 
 # Lấy cùng ảnh, một cái gốc, một cái Augmentation
-indices = torch.randperm(len(train_dataset))[:4]  # Chọn ngẫu nhiên 4 ảnh
+indices = torch.randperm(len(train_dataset))[:6]  # Chọn ngẫu nhiên 4 ảnh
 original_images = [original_transform(train_dataset[i][0]) for i in indices]
 augmented_images = [train_transform(train_dataset[i][0]) for i in indices]
 labels = [train_dataset[i][1] for i in indices]
@@ -41,15 +41,15 @@ def im_convert(tensor):
     image = np.clip(image, 0, 1)
     return image
 
-fig, axes = plt.subplots(2, 4, figsize=(12, 6))
+fig, axes = plt.subplots(2, 6, figsize=(12, 6))
 # fig, axes = plt.subplots(2, 4, figsize=(8, 6))
 
-for i in range(4):
+for i in range(6):
     # Ảnh gốc
     ax = axes[0, i]
     ax.imshow(im_convert(original_images[i]))
     ax.axis("off")
-    ax.set_title("Gốc: Dog" if labels[i] == 1 else "Gốc: Cat")
+    ax.set_title("Original Dog" if labels[i] == 1 else "Original Cat")
 
     # Ảnh Augmentation
     ax = axes[1, i]
@@ -60,9 +60,9 @@ for i in range(4):
     img = np.clip(img, 0, 1)
     ax.imshow(img)
     ax.axis("off")
-    ax.set_title("Aug: Dog" if labels[i] == 1 else "Aug: Cat")
+    ax.set_title("Augumented Dog" if labels[i] == 1 else "Augumented Cat")
 
-plt.suptitle("Compare 4 images before & after Augmentation", fontsize=14)
+plt.suptitle("before & after Augmentation", fontsize=14)
 plt.show()
 
 

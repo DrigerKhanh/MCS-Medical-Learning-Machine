@@ -61,7 +61,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(alexnet.classifier.parameters(), lr=0.0001)
 
 # Training Loop
-num_epochs = 5
+num_epochs = 10
 loss_history = []  # Save loss for each epoch
 for epoch in range(num_epochs):
     alexnet.train()
