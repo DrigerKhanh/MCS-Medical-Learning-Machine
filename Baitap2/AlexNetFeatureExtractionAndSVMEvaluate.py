@@ -87,7 +87,7 @@ for epoch in range(num_epochs):
     accuracy = 100 * correct / total
     print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}, Accuracy: {accuracy:.2f}%")
 
-print("Training hoàn tất!")
+print("Training Completed")
 
 # Ve loss function
 plt.plot(range(1, num_epochs + 1), loss_history, marker='o', label='Training Loss')
