@@ -1,4 +1,5 @@
 import numpy as np
+import seaborn as sns
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -206,7 +207,15 @@ print(f"F1-score: {f1 * 100:.2f}%")
 # Confussion matrix
 cm = confusion_matrix(y_test, y_pred)
 print("\nConfusion Matrix:")
-print(tabulate(cm, headers=["Predicted 0", "Predicted 1"], tablefmt="grid"))
+#Acknowldedge Confussion matrix detail
+# print(train_dataset.class_to_idx)
+# print(tabulate(cm, headers=["Predicted Cat", "Predicted Dog"], tablefmt="grid"))
+plt.figure(figsize=(7, 5))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Predicted Cat', 'Predicted Dog'], yticklabels=['Actual Cat', 'Actual Dog'])
+plt.title('Confusion Matrix - AlexNet Architecture')
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.show()
 
 # Classification Report
 report = classification_report(y_test, y_pred, output_dict=True)
@@ -235,6 +244,25 @@ for label, metrics in report.items():
 # Hiển thị bảng Classification Report
 print("\nClassification Report:")
 print(tabulate(report_table, headers=headers, tablefmt="grid"))
+
+# Ve classification report
+metrics = ['Accuracy', 'Precision', 'Recall', 'F1']
+values = [accuracy, precision, recall, f1]
+colors = ['skyblue', 'sandybrown', 'lightgreen', 'lightcoral']
+
+# Vẽ biểu đồ cột
+plt.figure(figsize=(6, 5))
+bars = plt.bar(metrics, values, color=colors)
+
+# Hiển thị giá trị trên đầu mỗi cột
+for bar in bars:
+    yval = bar.get_height()
+    plt.text(bar.get_x() + bar.get_width()/2, yval + 0.01, f"{yval:.4f}", ha='center', va='bottom')
+
+plt.ylim(0, 1.1)  # Đặt giới hạn trục Y
+plt.title("Classification Report Summary")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
 
 # Dự đoán xác suất cho AUC-ROC
 if kernel_choice in ['linear', 'sigmoid']:
