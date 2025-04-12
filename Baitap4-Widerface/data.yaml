@@ -1,0 +1,6 @@
+path: D:/ThacSiKHMT/Subjects/Xu-Li-may-hoc-trong-y-khoa/Homework-sourcecode/MCS-Medical-Learning-Machine/Baitap4-Widerface/dataset
+train: images/train
+val: images/val
+names:
+  0: face
+  1: half-face
