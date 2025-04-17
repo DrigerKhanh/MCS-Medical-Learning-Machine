@@ -87,6 +87,22 @@ plt.grid()
 plt.show()
 
 # ===================== Evaluation =====================
+#Evaluate qua tap validation
+vgg16.eval()
+y_val, y_val_pred = [], []
+
+with torch.no_grad():
+    for inputs, labels in validation_loader:
+        inputs = inputs.to(device)
+        outputs = vgg16(inputs)
+        _, preds = torch.max(outputs, 1)
+        y_val.extend(labels.numpy())
+        y_val_pred.extend(preds.cpu().numpy())
+
+validation_accuracy = accuracy_score(y_val, y_val_pred)
+print(f"Validation accuracy: {validation_accuracy:.2f}")
+
+# Evaluate qua tap Test
 vgg16.eval()
 y_true, y_pred = [], []
 
@@ -97,6 +113,9 @@ with torch.no_grad():
         _, preds = torch.max(outputs, 1)
         y_true.extend(labels.numpy())
         y_pred.extend(preds.cpu().numpy())
+
+test_accuracy = accuracy_score(y_true, y_pred)
+print(f"Test accuracy: {test_accuracy:.2f}")
 
 print("Confusion Matrix:")
 cm = confusion_matrix(y_true, y_pred)
