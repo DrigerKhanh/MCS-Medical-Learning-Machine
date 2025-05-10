@@ -5,6 +5,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torchvision.models as models
 import torchvision.transforms as transforms
+import TransformAndAugmentation
 from matplotlib import pyplot as plt
 from tabulate import tabulate
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, \
@@ -47,8 +48,8 @@ transform = transforms.Compose([
 ])
 
 # Load dataset
-train_dataset = datasets.ImageFolder(root=train_dir, transform=transform)
-test_dataset = datasets.ImageFolder(root=test_dir, transform=transform)
+train_dataset = datasets.ImageFolder(root=train_dir, transform=TransformAndAugmentation.train_and_test_transform())
+test_dataset = datasets.ImageFolder(root=test_dir, transform=TransformAndAugmentation.train_and_test_transform())
 
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
