@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: Baitap4-Widerface/data.yaml
+data: Baitap3-Widerface/data.yaml
 epochs: 30
 time: null
 patience: 100
