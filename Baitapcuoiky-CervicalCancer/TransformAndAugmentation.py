@@ -99,9 +99,9 @@ def verify_augmentation():
     plt.suptitle("Original and Augmentation Images", fontsize=14)
     plt.figtext(0.5, 0.01,
                 "HSIEL: High-squamous-intra-epithelial-lesion   |   "
-                "LSIEL: Low-squamous-intra-epithelial-lesion   |   "
+                "LSIEL: Low-squamous-intra-epithelial-lesion\n"
                 "NFIM: Negative-for-Intraepithelial-malignancy   |   "
-                "SCC: Squamous-cell-carcinoma",
+                "SCC: Squamous-cell-carcinoma\n",
                 ha="center", fontsize=14, wrap=True
                 )
     plt.show()
