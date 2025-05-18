@@ -6,13 +6,14 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
 train_dir = "./dataset/Train"
+val_dir = "./dataset/Validation"
 test_dir = "./dataset/Test"
 
 # Transform the training set with augmentation and resizing
 
 # Augmentation
-def train_and_test_transform():
-    train_transform = transforms.Compose([
+def training_transform():
+    transform = transforms.Compose([
         transforms.Resize(256),                                                     # Resize cạnh ngắn nhất về 256 pixel
         transforms.RandomResizedCrop(224, scale=(0.8, 1.0)),
         transforms.RandomHorizontalFlip(p=0.5),
@@ -22,7 +23,15 @@ def train_and_test_transform():
         transforms.ToTensor(),                                                      # Chuyển đổi thành Tensor
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) # Chuẩn hóa theo ImageNet
     ])
-    return train_transform
+    return transform
+
+def val_and_test_transform():
+    # Cấu hình preprocessing cho ảnh
+    transform = transforms.Compose([
+        transforms.Resize((224, 224)),  # Kích thước input của AlexNet
+        transforms.ToTensor(),
+    ])
+    return transform
 
 # Hàm bỏ chuẩn hóa và hiển thị
 def im_convert(tensor):
@@ -31,7 +40,7 @@ def im_convert(tensor):
     return image
 
 def verify_augmentation():
-    train_transform = train_and_test_transform()
+    train_transform = training_transform()
     # Load Dataset 1 lần (Không dùng 2 DataLoader riêng)
     train_dataset = datasets.ImageFolder(root=train_dir)
 
@@ -61,24 +70,26 @@ def verify_augmentation():
     augmented_images = [train_transform(train_dataset[i][0]) for i in selected_indices]
     labels = [train_dataset[i][1] for i in selected_indices]
 
-    fig, axes = plt.subplots(2, 8, figsize=(15, 6))
+    fig, axes = plt.subplots(2, 10, figsize=(15, 6))
     # fig, axes = plt.subplots(2, 4, figsize=(8, 6))
 
     original_label_map = {
-        0: "Ori HSIEL",
-        1: "Ori LSIEL",
-        2: "Ori NFIM",
-        3: "Ori SCC"
+        0: "Ori dyk",
+        1: "Ori koc",
+        2: "Ori mep",
+        3: "Ori pab",
+        4: "Ori sfi",
     }
 
     augmented_label_map = {
-        0: "Aug HSIEL",
-        1: "Aug LSIEL",
-        2: "Aug NFIM",
-        3: "Aug SCC"
+        0: "Aug dyk",
+        1: "Aug koc",
+        2: "Aug mep",
+        3: "Aug pab",
+        4: "Aug sfi",
     }
 
-    for i in range(8):
+    for i in range(10):
         # Ảnh gốc
         ax = axes[0, i]
         ax.imshow(im_convert(original_images[i]))
@@ -98,10 +109,11 @@ def verify_augmentation():
 
     plt.suptitle("Original and Augmentation Images", fontsize=14)
     plt.figtext(0.5, 0.01,
-                "HSIEL: High-squamous-intra-epithelial-lesion   |   "
-                "LSIEL: Low-squamous-intra-epithelial-lesion\n"
-                "NFIM: Negative-for-Intraepithelial-malignancy   |   "
-                "SCC: Squamous-cell-carcinoma\n",
+                "cervix_dyk: Điểm bất thường trong nhân tế bào   |   "
+                "cervix_koc: Keratinizing/Others Cells - Tế bào sừng hóa/Các tế bào khác\n"
+                "cervix_mep: Metaplastic Epithelium — tế bào biểu mô chuyển sản   |   "
+                "cervix_pab: Papillomavirus Associated Biopsy — Sinh thiết liên quan đến Papillomavirus HPV\n"
+                "cervix_sfi: Squamous Intraepithelial Lesion - Tổn thương biểu mô vảy",
                 ha="center", fontsize=14, wrap=True
                 )
     plt.show()
@@ -111,7 +123,7 @@ if __name__ == '__main__':
     verify_augmentation()
     # Code cho vui chu ko lam gi ca
     # Load tập test
-    test_dataset = datasets.ImageFolder(root=test_dir, transform=train_and_test_transform())
+    test_dataset = datasets.ImageFolder(root=test_dir, transform=val_and_test_transform())
     test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
     # Kiểm tra số lượng ảnh trong tập test

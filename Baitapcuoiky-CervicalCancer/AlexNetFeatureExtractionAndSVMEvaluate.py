@@ -17,10 +17,14 @@ from torchvision import datasets
 from torch.utils.data import DataLoader
 
 train_dir = "./dataset/Train"
+val_dir = "./dataset/Validation"
 test_dir = "./dataset/Test"
 
-# Kiểm tra nếu có GPU
+# Thiết bị sử dụng: GPU nếu có
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
+if device.type == "cuda":
+    print(torch.cuda.get_device_name(0))
 
 # Load AlexNet pre-trained
 # weights=models.AlexNet_Weights.IMAGENET1K_V1: sử dụng trọng số đã được huấn luyện trên ImageNet.
@@ -37,21 +41,39 @@ alexnet.classifier = nn.Sequential(
     nn.Linear(9216, 1024),
     nn.ReLU(),
     nn.Dropout(0.5),
-    nn.Linear(1024, 4)
+    nn.Linear(1024, 5)
 )
 alexnet = alexnet.to(device)
 
-# Cấu hình preprocessing cho ảnh
-transform = transforms.Compose([
-    transforms.Resize((224, 224)),  # Kích thước input của AlexNet
-    transforms.ToTensor(),
-])
+# Augmentation
+def training_transform():
+    transform = transforms.Compose([
+        transforms.Resize(256),                                                     # Resize cạnh ngắn nhất về 256 pixel
+        transforms.RandomResizedCrop(224, scale=(0.8, 1.0)),
+        transforms.RandomHorizontalFlip(p=0.5),
+        transforms.RandomRotation(15),
+        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+        transforms.RandomAffine(degrees=0, translate=(0.05, 0.05)),
+        transforms.ToTensor(),                                                      # Chuyển đổi thành Tensor
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) # Chuẩn hóa theo ImageNet
+    ])
+    return transform
+
+def val_and_test_transform():
+    # Cấu hình preprocessing cho ảnh
+    transform = transforms.Compose([
+        transforms.Resize((224, 224)),  # Kích thước input của AlexNet
+        transforms.ToTensor(),
+    ])
+    return transform
 
 # Load dataset
-train_dataset = datasets.ImageFolder(root=train_dir, transform=TransformAndAugmentation.train_and_test_transform())
-test_dataset = datasets.ImageFolder(root=test_dir, transform=TransformAndAugmentation.train_and_test_transform())
+train_dataset = datasets.ImageFolder(root=train_dir, transform=training_transform())
+validation_dataset = datasets.ImageFolder(root=val_dir, transform=val_and_test_transform())
+test_dataset = datasets.ImageFolder(root=test_dir, transform=val_and_test_transform())
 
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+validation_loader = DataLoader(validation_dataset, batch_size=32, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
 # Cấu hình Loss và Optimizer
@@ -95,6 +117,21 @@ plt.ylabel('Loss')
 plt.grid(True)
 plt.legend()
 plt.show()
+
+# Đánh giá trên tập validation
+alexnet.eval()
+correct = 0
+total = 0
+with torch.no_grad():
+    for images, labels in validation_loader:
+        images, labels = images.to(device), labels.to(device)
+        outputs = alexnet(images)
+        _, predicted = torch.max(outputs, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+
+validation_accuracy = 100 * correct / total
+print(f"Validation Accuracy: {validation_accuracy:.2f}%")
 
 # Đánh giá trên tập test
 alexnet.eval()
@@ -146,6 +183,7 @@ def extract_features(dataloader, model):
 
 # Trích xuất đặc trưng cho tập train, validation & test
 X_train, y_train = extract_features(train_loader, feature_extractor)
+X_validation, y_validation = extract_features(validation_loader, feature_extractor)
 X_test, y_test = extract_features(test_loader, feature_extractor)
 
 # Kiểm tra kích thước đầu ra
@@ -159,6 +197,9 @@ svm_model = make_pipeline(StandardScaler(), SVC(kernel='rbf', probability=True))
 
 # Huấn luyện mô hình
 svm_model.fit(X_train, y_train)
+
+# Dự đoán trên tập validation
+y_validation_pred = svm_model.predict(X_validation)
 
 # Dự đoán trên tập kiểm tra
 y_pred = svm_model.predict(X_test)
@@ -182,7 +223,7 @@ print(f"F1-score: {f1 * 100:.2f}%")
 
 # Confussion matrix
 cm = confusion_matrix(y_test, y_pred)
-class_names = ['HSIEL', 'LSIEL', 'NFIM', 'SCC']  # Tên lớp theo thứ tự trong tập dữ liệu
+class_names = ['DYK', 'KOC', 'MEP', 'PAB', 'SFI']  # Tên lớp theo thứ tự trong tập dữ liệu
 
 plt.figure(figsize=(8, 6))
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
@@ -236,7 +277,7 @@ print(tabulate(report_table, headers=headers, tablefmt="grid"))
 # print(classification_report(y_test, y_pred, target_names=class_names, digits=2, zero_division=0))
 
 # Binarize y_test để tính AUC cho từng lớp (one-vs-rest)
-y_test_bin = label_binarize(y_test, classes=[0, 1, 2, 3])
+y_test_bin = label_binarize(y_test, classes=[0, 1, 2, 3, 4])
 
 # Dự đoán xác suất cho từng lớp
 y_pred_proba = svm_model.predict_proba(X_test)  # shape: (n_samples, n_classes)
@@ -245,14 +286,14 @@ y_pred_proba = svm_model.predict_proba(X_test)  # shape: (n_samples, n_classes)
 fpr = dict()
 tpr = dict()
 roc_auc = dict()
-for i in range(4):  # 4 lớp
+for i in range(5):  # 5 lớp
     fpr[i], tpr[i], _ = roc_curve(y_test_bin[:, i], y_pred_proba[:, i])
     roc_auc[i] = roc_auc_score(y_test_bin[:, i], y_pred_proba[:, i])
 
 # Vẽ tất cả các đường ROC cho từng lớp
 plt.figure(figsize=(8, 6))
-colors = ['blue', 'orange', 'green', 'red']
-for i in range(4):
+colors = ['blue', 'orange', 'green', 'red', 'purple']
+for i in range(5):
     plt.plot(fpr[i], tpr[i], color=colors[i], label=f'Class {i} (AUC = {roc_auc[i]:.4f})')
 
 plt.plot([0, 1], [0, 1], color='gray', linestyle='--')
